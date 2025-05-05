@@ -1,57 +1,55 @@
-# Proyecto: Sistema de Gestión de Biblioteca (CLI)
+# 📚 Proyecto: Sistema de Gestión de Biblioteca (CLI)
 
-Este proyecto es una aplicación de línea de comandos (CLI) desarrollada en Python para la gestión de una biblioteca. Permite realizar operaciones CRUD (crear, leer, actualizar y eliminar) sobre libros almacenados en memoria.
-
----
-
-## 📚 Funcionalidades
-
-- Agregar libros
-- Modificar libros
-- Eliminar libros
-- Consultar libros disponibles
-- Validación de campos obligatorios y valores únicos (como el título o ISBN)
+Este proyecto es una aplicación de línea de comandos (CLI) desarrollada en Python para la gestión de una biblioteca. Permite realizar operaciones CRUD sobre libros, usuarios y préstamos, utilizando árboles binarios de búsqueda para mantener los datos ordenados y eficientes.
 
 ---
 
-## 👨‍💼 Tecnologías utilizadas
+## ✨ Funcionalidades
 
-- Python 3.13.2
-- Programación estructurada y modular
-- Entrada y salida por consola
+- 📘 Gestión de Libros:
+  - Agregar, consultar, buscar y eliminar libros.
+  - Validación de campos únicos como título e ISBN.
+  
+- 👤 Gestión de Usuarios:
+  - Registro, consulta y búsqueda por ID o nombre.
+  
+- 🔄 Gestión de Préstamos:
+  - Asociar un libro a un usuario.
+  - Verificar disponibilidad del libro y existencia del usuario.
+  - Registro de préstamos activos.
+
+- 💾 Persistencia de datos:
+  - Uso de archivos `.json` para guardar y recuperar los datos automáticamente al cerrar y abrir la aplicación.
 
 ---
 
-## ⚖️ Estructura del proyecto
+## 🛠 Tecnologías utilizadas
 
+- Python `3.13.2`
+- Árbol Binario de Búsqueda (ABB)
+- Módulo `json` (para persistencia)
+- Programación modular
+
+---
+
+## ⚙️ Estructura del proyecto
 ```
-proyecto-biblioteca/
-├── controllers/          # Acciones principales (CRUD)
-├── models/               # Modelo en memoria (estructura de datos)
-├── utils/                # Funciones reutilizables (menú, validación, etc)
-├── main.py               # Punto de entrada del programa
-└── .gitignore            # Archivos ignorados por Git
+proyecto-sistema-biblioteca/
+├── controllers/ # Lógica de control (libros, usuarios, préstamos)
+├── models/ # Clases base y estructuras de datos (Libro, Usuario, Prestamo, ArbolBB)
+├── utils/ # Funciones auxiliares (menús, validaciones, persistencia)
+├── main.py # Punto de entrada del programa
+├── README.md # Documentación del proyecto
+└── .gitignore # Archivos ignorados por Git
 ```
-
----
-
 ## ▶️ Ejecución
 
-Ejecuta:
+Desde la raíz del proyecto, ejecuta:
 
 ```bash
 python main.py
 ```
 
----
+👨‍💻 Autor
 
-## 🚀 Autor
-
-Cristhofer Tibaquicha.
-
----
-
-## ✍️ Notas adicionales
-
-- Todos los datos se almacenan temporalmente en memoria (no hay persistencia en disco).
-- Este proyecto fue desarrollado como parte de un trabajo universitario sobre estructuras de datos lineales.
+Cristhofer Tibaquicha — Proyecto académico para la asignatura de estructuras de datos.
